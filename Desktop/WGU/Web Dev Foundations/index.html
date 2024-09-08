@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New York State</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+<h1>Welcome to New York State!</h1>
+</header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="nyc.html">New York City</a></li>
+            <li><a href="buffalo.html">Buffalo</a></li>
+            <li><a href="rochester.html">Rochester</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>About New York</h2>
+        <p>New York is home to New York City, the Hudson Valley, and a vast plethora of rural areas.</p>
+        <p>Learn more about New York at the <a href="https://www.iloveny.com" target="_blank">official tourism website</a>.</p>
+        
+        <img src="nys.jpeg" alt="Image of New York State">
+        <h2>Contact us</h2>
+        <form id="contact-form">
+            <label for="fname">First Name</label>
+            <input type="text" id=fname placeholder="Enter your first name" required><br><br>
+            
+            <label for="lname">Last Name</label>
+            <input type="text" id=lname placeholder="Enter your last name" required><br><br>
+            
+            <label for="email">Email</label>
+            <input type="email" id=email placeholder="Enter your email" required><br><br>
+            
+            <label for="confirm-email">Confirm Email</label>
+            <input type="email" id=confirm-email placeholder="Confirm your email" required><br><br>
+            
+            <label for="question">Your Question:</label>
+            <textarea id="question" placeholder="Type your question here"></textarea><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <aside>
+        <h3>Quick Facts</h3>
+        <ul>
+            <li>Population: 19.45 million</li>
+            <li>Capital: Albany</li>
+            <li>Region: Northeastern United States</li>
+        </ul>
+    </aside>
+
+    <table>
+        <tr>
+            <th>City</th>
+            <th>Population</th>
+            <th>Income (Compared to State)</th>
+        </tr>
+        <tr>
+            <td>New York City</td>
+            <td>8.4 million</td>
+            <td>$80,000 (above state average)</td>
+        </tr>
+        <tr>
+            <td>Buffalo</td>
+            <td>255,000</td>
+            <td>$60,000 (below state average)</td>
+        </tr>
+        <tr>
+            <td>Rochester</td>
+            <td>206,000</td>
+            <td>$50,000 (below state average)</td>
+        </tr>
+    </table>
+
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(e) {
+            var email = document.getElementById("email").value;
+            var confirmEmail = document.getElementById("confirm-email").value;
+    
+            if (email !== confirmEmail) {
+                alert("Email addresses do not match!");
+                e.preventDefault();
+            }
+        });
+    </script>
+    
+</body>
+</html>
